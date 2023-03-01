@@ -3,7 +3,7 @@
 ![Build Status](https://badgen.net/badge/version/1.0/blue)</br>
  A concurrent job worker for processing slow MYSQL queries.
 
-![](.\screen.JPG)
+![](screen.JPG)
 
 ## Introduction
 
