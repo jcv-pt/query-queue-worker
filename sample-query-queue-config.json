@@ -1,0 +1,34 @@
+{
+  "debug": true,
+  "logs": {
+    "enabled": true,
+    "path": "./logs/",
+    "maxSize": 10,
+    "maxNumber": 7
+  },
+  "threads": {
+    "max": 5,
+    "waitToFinish": true
+  },
+  "mysql": {
+    "hostname": "localhost",
+    "port": "3306",
+    "database": "<database_name>",
+    "username": "<database_username>",
+    "password": "<database_password>"
+  },
+  "worker": {
+    "idle": 30,
+    "executable": "<executable_path>",
+    "commands": {
+      "single": "query-queue process single --signature %s",
+      "update": "query-queue process update --signature %s",
+      "maintenance": "query-queue process maintenance"
+    },
+    "processes": {
+      "maintenance": {
+        "idle": 2160
+      }
+    }
+  }
+}
